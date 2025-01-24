@@ -6,8 +6,10 @@
 //     return a+b+c;
 // }
 
-console.log(a);
+// console.log(a);
 
-var a = 2;
+// var a = 2;
 // console.log(b);
-const b = 3;
+// const b = 3;
+const a = "";
+a && console.log("yes");

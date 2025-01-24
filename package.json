@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "This folder includes all the practice and other related material for the javascript practice at the cropsly.",
   "main": "function.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
