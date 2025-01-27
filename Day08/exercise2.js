@@ -66,10 +66,10 @@ const point = () => {
     }
     console.log(count);
 }
-point();
+// point();
 
 // Find people who are MERN stack developer from the users object
-let MERN = `MongoDB`;
+let MERN = "MongoDB" && "Node" && "React" && "Express";
 let c = 0;
 for (obj in users) {
     if(users[obj].skills.includes(MERN)){
@@ -90,7 +90,7 @@ const userskeys = () => {
     const keys = Object.keys(users[obj]);
     console.log(keys)
 }
-userskeys();
+// userskeys();
 
 const allKeys = () => {
     for (obj in users) {
@@ -98,7 +98,7 @@ const allKeys = () => {
         console.log(keys)
     }
 }
-allKeys();
+// allKeys();
 
 // Get all the values of users object
 
