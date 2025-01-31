@@ -43,15 +43,36 @@ const catsAPI = "https://api.thecatapi.com/v1/breeds";
 
 // Exercises: Level 1
 // Read the countries API using fetch and print the name of country, capital, languages, population and area
+// fetch(countriesAPI)
+//     .then((response) => response.json())
+//     .then((data) => {
+//         data.forEach((country) => {
+//             console.log(country.name);
+//             console.log(country.capital);
+//             console.log(country.languages);
+//             console.log(country.population);
+//             console.log(country.area);
+//         });
+//     })
+//     .catch((error) => console.error(error));
+
+// fetch(countriesAPI)
+//     .then((response) => response.json())
+//     .then((data) => {
+//         data.forEach(({ name, capital, languages, population, area }) => {
+//             console.log(`Name: ${name}`);
+//             console.log(`Capital: ${capital}`);
+//             console.log(`Languages: ${languages.map(lang => lang.name).join(', ')}`);
+//             console.log(`Population: ${population}`);
+//             console.log(`Area: ${area}`);
+//         });
+//     })
+//     .catch((error) => console.error(error));
+
 fetch(countriesAPI)
     .then((response) => response.json())
     .then((data) => {
-        data.forEach((country) => {
-            console.log(country.name);
-            console.log(country.capital);
-            console.log(country.languages);
-            console.log(country.population);
-            console.log(country.area);
+        data.forEach(({name, capital, language, population, area}) => {
+            console.log(name)            
         });
-    })
-    .catch((error) => console.error(error));
+ })
