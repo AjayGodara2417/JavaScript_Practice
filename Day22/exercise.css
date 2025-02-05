@@ -1,0 +1,18 @@
+h2 { 
+    width: 120px;
+    height: 70px;
+    padding: 1.5px;
+    margin: 3px;
+    /* text-align: center; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nums {
+    display: flex;
+    flex-wrap: wrap;
+    width: 850px;
+    justify-self: center;
+}
