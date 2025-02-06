@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1></h1> -->
+    <!-- <div id="keydiv"></div> -->
+<!-- <script>
+    const bd = document.querySelector('body')
+        bd.style.display = 'flex'
+        bd.style.margin = 'auto'
+        bd.style.flexDirection = 'column'
+        bd.style.justifyContent = 'center'
+        bd.style.alignItems = 'center'
+
+        const heading = document.createElement('h1')
+        bd.appendChild(heading)
+        heading.textContent = 'Press any key'
+        heading.style.color = 'green'
+        
+        document.body.addEventListener('keypress', (e) => {
+            const keyDiv = document.createElement('div');
+            keyDiv.textContent = `You pressed the key: ${e.key}
+            the key code is ${e.keyCode}`;
+            bd.appendChild(keyDiv)
+        });
+</script> -->
+
+    <script>
+
+        const bd = document.querySelector('body')
+        bd.style.display = 'flex'
+        bd.style.margin = '0'
+        bd.style.height = '100vh'
+        bd.style.flexDirection = 'column'
+        bd.style.justifyContent = 'center'
+        bd.style.alignItems = 'center'
+        bd.style.backgroundColor = '#f0f0f0'
+        bd.style.fontFamily = 'Arial, sans-serif'
+
+        const heading = document.createElement('h1')
+        bd.appendChild(heading)
+        heading.textContent = 'Press any key'
+        heading.style.color = '#4CAF50'
+        heading.style.marginBottom = '20px'
+
+        const keyDiv = document.createElement('div')
+        bd.appendChild(keyDiv)
+        keyDiv.id = 'keydiv'
+        keyDiv.style.padding = '10px 20px'
+        keyDiv.style.border = '2px solid #4CAF50'
+        keyDiv.style.borderRadius = '5px'
+        keyDiv.style.backgroundColor = '#fff'
+        keyDiv.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)'
+        keyDiv.style.transition = 'all 0.3s ease'
+
+        document.body.addEventListener('keypress', (e) => {
+            keyDiv.textContent = `Key pressed: ${e.key} || 
+            Key code: ${e.keyCode}`;
+            keyDiv.style.transform = 'scale(1.1)'
+            setTimeout(() => {
+            keyDiv.style.transform = 'scale(1)'
+            }, 100)
+        })
+    </script>
+  </body>
+</html>
