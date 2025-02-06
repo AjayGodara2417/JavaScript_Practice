@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Enter a number to generate</h2>
+    <input type="number" name="number" id="num" placeholder="Enter a number" />
+    <button id="generatebtn" onclick="generatenumbers()">Generate</button>
+    <div id="numsdiv"></div>
+
+    <script>
+
+        const bd = document.querySelector('body')
+        bd.style.backgroundColor = 'rgb(217, 222, 220)'
+        bd.style.display = 'flex'
+        bd.style.flexDirection = 'column'
+        bd.style.alignItems = 'center'
+        bd.style.padding = '10px'
+        bd.style.margin = '10px'
+
+        const heading = document.querySelector('h2')
+        heading.style.fontSize = '35px'
+
+        const btn = document.getElementById('generatebtn')
+        btn.style.margin = "10px"
+        btn.style.color = 'white'
+        btn.style.backgroundColor = 'blue'
+        btn.style.width = '100px'
+        btn.style.height = '35px'
+        btn.style.borderRadius = '10px'
+
+        let num = document.getElementById('num')
+        num.style.height = '30px'
+        num.style.width = '275px'
+
+        // const numsdiv = document.getElementById('generatebtn')
+        let numsdiv = document.getElementById('numsdiv')
+        numsdiv.style.width = '650px'
+        numsdiv.style.display = 'flex'
+        numsdiv.style.flexWrap = 'wrap'
+
+        const generatenumbers = () => {
+            // let numsdiv = document.getElementById('numsdiv')
+            // console.log(num.value)
+            let numgen = num.value;
+            
+            for(let i=0; i<=numgen; i++){
+                let numsdivele = document.createElement('p')
+                
+                numsdivele.textContent = i;
+                numsdiv.appendChild(numsdivele);
+
+                numsdivele.style.width = '70px'
+                numsdivele.style.height = '50px'
+                numsdivele.style.display = 'flex'
+                numsdivele.style.justifyContent = 'center'
+                numsdivele.style.alignItems = 'center'
+                numsdivele.style.margin = '5px'
+                numsdivele.style.fontSize = '22px'
+                numsdivele.style.backdropFilter = 'blure'
+
+                const checkPrime = (i) => {
+                    if ( i <= 0 ) {
+                        return false;
+                    } else {
+                        for (let j = 2; j < i; j++) {
+                            if ( i % j == 0) {
+                                return false;
+                            }
+                        }
+                    }
+                    return true;
+                }
+                
+                if( i % 2 == 0 ) {
+                    numsdivele.style.backgroundColor = 'rgb(106, 214, 29)'
+                } else if ( checkPrime(i) ) {
+                    numsdivele.style.backgroundColor = 'rgb(247, 74, 74)'
+                } else {
+                    numsdivele.style.backgroundColor = 'rgb(246, 246, 68)'
+                }
+            }
+        }
+    </script>
+</body>
+</html>
