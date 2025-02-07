@@ -63,22 +63,21 @@
                 numsdivele.style.backdropFilter = 'blure'
 
                 const checkPrime = (i) => {
-                    if ( i <= 0 ) {
+                    if ( i <= 1 ) {
                         return false;
-                    } else {
-                        for (let j = 2; j < i; j++) {
-                            if ( i % j == 0) {
-                                return false;
-                            }
+                    }
+                    for (let j = 2; j < i; j++) {
+                        if ( i % j == 0) {
+                            return false;
                         }
                     }
                     return true;
                 }
                 
-                if( i % 2 == 0 ) {
-                    numsdivele.style.backgroundColor = 'rgb(106, 214, 29)'
-                } else if ( checkPrime(i) ) {
+                if ( checkPrime(i) ) {
                     numsdivele.style.backgroundColor = 'rgb(247, 74, 74)'
+                } else if ( i % 2 == 0 ) {
+                    numsdivele.style.backgroundColor = 'rgb(106, 214, 29)'
                 } else {
                     numsdivele.style.backgroundColor = 'rgb(246, 246, 68)'
                 }
